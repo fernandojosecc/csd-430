@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Eclipse and Word
+.metadata/
+.settings/
+.classpath
+.project
+Servers/
+build/
+~$*
+.DS_Store
