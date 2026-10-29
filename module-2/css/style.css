@@ -1,0 +1,82 @@
+/*
+  Name: Fernando Contreras
+  Date: October 28, 2026
+  Assignment: CSD 430 Module 2.2
+  Purpose: External style sheet for edinburgh.jsp.
+*/
+
+/* Page layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f1ec;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 24px;
+}
+
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h1 {
+    color: #7a3b4e;
+    border-bottom: 3px solid #e8c9d1;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #7a3b4e;
+    margin-top: 28px;
+}
+
+h2.genre {
+    background-color: #f7e6ea;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* Text sections */
+.description {
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.fields li {
+    margin-bottom: 6px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+th, td {
+    border: 1px solid #d8d0c8;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #7a3b4e;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #faf6f2;
+}
+
+/* Footer */
+.footer {
+    margin-top: 32px;
+    font-size: 0.85em;
+    color: #777777;
+    text-align: center;
+}
