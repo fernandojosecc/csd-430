@@ -1,0 +1,146 @@
+/*
+  Name: Fernando Contreras
+  Date: November 3, 2026
+  Assignment: CSD 430 Module 3.2
+  Purpose: External style sheet for feedback.html and results.jsp.
+*/
+
+/* Page layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f1ec;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 24px;
+}
+
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h1 {
+    color: #7a3b4e;
+    border-bottom: 3px solid #e8c9d1;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #7a3b4e;
+    margin-top: 28px;
+}
+
+/* Text sections */
+.description {
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.summary {
+    background-color: #f7e6ea;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+a {
+    color: #7a3b4e;
+}
+
+/* Form */
+.field {
+    margin-bottom: 18px;
+    border: none;
+    padding: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+fieldset.field label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 16px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px;
+    border: 1px solid #d8d0c8;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    max-width: 100%;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 24px;
+}
+
+button {
+    background-color: #7a3b4e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button.secondary {
+    background-color: #9a9a9a;
+}
+
+/* Results table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+th, td {
+    border: 1px solid #d8d0c8;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #7a3b4e;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #faf6f2;
+}
+
+/* Footer */
+.footer {
+    margin-top: 32px;
+    font-size: 0.85em;
+    color: #777777;
+    text-align: center;
+}

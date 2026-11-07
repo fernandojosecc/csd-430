@@ -1,0 +1,109 @@
+<!--
+  Name: Fernando Contreras
+  Date: November 3, 2026
+  Assignment: CSD 430 Module 3.2 - Restaurant Feedback Form
+  Purpose: Collect feedback about a restaurant visit and send it to results.jsp for display.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Restaurant Feedback Form</h1>
+
+        <p class="description">
+            Tell us about your recent meal. This form has nine questions and takes
+            about a minute. When you submit it, your answers appear on the next page.
+        </p>
+
+        <!-- The form sends its data to results.jsp using POST -->
+        <form action="results.jsp" method="post">
+
+            <!-- Text input: customer name -->
+            <div class="field">
+                <label for="customerName">Your name</label>
+                <input type="text" id="customerName" name="customerName" maxlength="50" required>
+            </div>
+
+            <!-- Text input: restaurant name -->
+            <div class="field">
+                <label for="restaurantName">Restaurant name</label>
+                <input type="text" id="restaurantName" name="restaurantName" maxlength="60" required>
+            </div>
+
+            <!-- Date input: day of the visit -->
+            <div class="field">
+                <label for="visitDate">Date of your visit</label>
+                <input type="date" id="visitDate" name="visitDate" required>
+            </div>
+
+            <!-- Drop-down list: type of meal -->
+            <div class="field">
+                <label for="mealType">Which meal did you have?</label>
+                <select id="mealType" name="mealType" required>
+                    <option value="">Choose one</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Coffee or dessert">Coffee or dessert</option>
+                </select>
+            </div>
+
+            <!-- Radio buttons: food rating from 1 to 5 -->
+            <fieldset class="field">
+                <legend>How was the food? (1 = poor, 5 = excellent)</legend>
+                <label><input type="radio" name="foodRating" value="1" required> 1</label>
+                <label><input type="radio" name="foodRating" value="2"> 2</label>
+                <label><input type="radio" name="foodRating" value="3"> 3</label>
+                <label><input type="radio" name="foodRating" value="4"> 4</label>
+                <label><input type="radio" name="foodRating" value="5"> 5</label>
+            </fieldset>
+
+            <!-- Radio buttons: service rating from 1 to 5 -->
+            <fieldset class="field">
+                <legend>How was the service? (1 = poor, 5 = excellent)</legend>
+                <label><input type="radio" name="serviceRating" value="1" required> 1</label>
+                <label><input type="radio" name="serviceRating" value="2"> 2</label>
+                <label><input type="radio" name="serviceRating" value="3"> 3</label>
+                <label><input type="radio" name="serviceRating" value="4"> 4</label>
+                <label><input type="radio" name="serviceRating" value="5"> 5</label>
+            </fieldset>
+
+            <!-- Checkboxes: the user can pick more than one -->
+            <fieldset class="field">
+                <legend>What did you like? (pick any)</legend>
+                <label><input type="checkbox" name="liked" value="Food quality"> Food quality</label>
+                <label><input type="checkbox" name="liked" value="Portion size"> Portion size</label>
+                <label><input type="checkbox" name="liked" value="Price"> Price</label>
+                <label><input type="checkbox" name="liked" value="Atmosphere"> Atmosphere</label>
+                <label><input type="checkbox" name="liked" value="Cleanliness"> Cleanliness</label>
+            </fieldset>
+
+            <!-- Radio buttons: yes or no -->
+            <fieldset class="field">
+                <legend>Would you recommend this restaurant?</legend>
+                <label><input type="radio" name="recommend" value="Yes" required> Yes</label>
+                <label><input type="radio" name="recommend" value="No"> No</label>
+            </fieldset>
+
+            <!-- Text area: free-form comments -->
+            <div class="field">
+                <label for="comments">Any other comments?</label>
+                <textarea id="comments" name="comments" rows="4" maxlength="500"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit Feedback</button>
+                <button type="reset" class="secondary">Clear Form</button>
+            </div>
+        </form>
+
+        <p class="footer">CSD 430 - Module 3.2 - Fernando Contreras</p>
+    </div>
+</body>
+</html>
