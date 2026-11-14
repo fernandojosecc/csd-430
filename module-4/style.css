@@ -1,0 +1,134 @@
+/*
+  Name: Fernando Contreras
+  Date: November 14, 2026
+  Assignment: CSD 430 Module 4.2
+  Purpose: External style sheet for places.jsp.
+*/
+
+/* Use the same box sizing everywhere so widths behave the same in every browser */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #eef3f9;
+    color: #2b2b2b;
+    line-height: 1.5;
+    margin: 0;
+    padding: 24px 16px;
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 28px 36px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h1 {
+    color: #1f4e79;
+    margin-top: 0;
+    border-bottom: 3px solid #b7d0ea;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #1f4e79;
+    margin-top: 28px;
+}
+
+/* Text sections */
+.description {
+    font-size: 1.05em;
+}
+
+.fields li {
+    margin-bottom: 6px;
+}
+
+/* Summary bar */
+.summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    background-color: #e3eefa;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+}
+
+/* Table (the wrapper lets the table scroll sideways on small screens) */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+th, td {
+    border: 1px solid #c9d6e6;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #1f4e79;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f8fc;
+}
+
+tbody tr:hover {
+    background-color: #e3eefa;
+}
+
+/* Rating column */
+td.rating {
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    margin-top: 32px;
+    font-size: 0.85em;
+    color: #777777;
+    text-align: center;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .page {
+        padding: 18px 16px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Printing */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+    .page {
+        box-shadow: none;
+    }
+}
