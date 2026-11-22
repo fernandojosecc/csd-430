@@ -1,0 +1,166 @@
+/*
+  Name: Fernando Contreras
+  Date: November 18, 2026
+  Assignment: CSD 430 Modules 5 and 6
+  Purpose: External style sheet for index.jsp and the CRUD pages.
+*/
+
+/* Use the same box sizing everywhere so widths behave the same in every browser */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #eef3f9;
+    color: #2b2b2b;
+    line-height: 1.5;
+    margin: 0;
+    padding: 24px 16px;
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 28px 36px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h1 {
+    color: #1f4e79;
+    margin-top: 0;
+    border-bottom: 3px solid #b7d0ea;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #1f4e79;
+    margin-top: 28px;
+}
+
+/* Text sections */
+.description {
+    font-size: 1.05em;
+}
+
+.fields li {
+    margin-bottom: 6px;
+}
+
+/* Summary bar */
+.summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    background-color: #e3eefa;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+}
+
+/* Table (the wrapper lets the table scroll sideways on small screens) */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+th, td {
+    border: 1px solid #c9d6e6;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #1f4e79;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f8fc;
+}
+
+tbody tr:hover {
+    background-color: #e3eefa;
+}
+
+/* Rating column */
+td.rating {
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Links on the index page */
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    border: 1px solid #c9d6e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+}
+
+.links a {
+    color: #1f4e79;
+}
+
+.note {
+    color: #777777;
+    font-size: 0.9em;
+}
+
+/* Footer */
+.footer {
+    margin-top: 32px;
+    font-size: 0.85em;
+    color: #777777;
+    text-align: center;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .page {
+        padding: 18px 16px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Printing */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+    .page {
+        box-shadow: none;
+    }
+}
+
+/* Form, error message, and field list styles (Modules 5.3 and 6.3) */
+.field { margin: 16px 0; }
+.field label { display: block; font-weight: bold; margin-bottom: 6px; color: #1f4e79; }
+.field select { width: 100%; max-width: 320px; padding: 10px; font-size: 1rem; border: 1px solid #9db5d1; border-radius: 4px; background-color: #ffffff; }
+.field select:focus { outline: 3px solid #9cc3ee; }
+.buttons button { padding: 10px 24px; font-size: 1rem; color: #ffffff; background-color: #1f4e79; border: 0; border-radius: 4px; cursor: pointer; }
+.buttons button:hover { background-color: #163a5c; }
+.error { padding: 12px 16px; background-color: #fdecea; border-left: 4px solid #c0392b; color: #7b1e14; }
+.fields { line-height: 1.6; }
